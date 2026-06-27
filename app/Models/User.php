@@ -14,6 +14,17 @@ use Illuminate\Notifications\Notifiable;
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
+    protected $fillable = ['fio', 'login', 'email', 'phone', 'password', 'role']; //поля для заполнения
+    protected $hidden = ['password', 'remember_token'];
+
+    public function reports()
+    {
+        return $this->hasMany(Report::class); // у одного пользователя могут быть написано много заявок
+    }
+    public function isAdmin()
+    {
+        return $this->role === 'admin'; //проверка на админку
+    }
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 

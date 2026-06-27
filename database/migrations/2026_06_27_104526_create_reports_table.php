@@ -17,12 +17,11 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained()->cascadeOnDelete(); //category_id
             $table->string('title'); //название ошибки
             $table->text('description'); //описание
-            $table->enum('category', ['Ямы на дорогах', 'Неисправное освещение', 'Мусор и свалки', 'Повреждение тротуара
-', 'Сломанная детская площадка', 'Незаконная парковка', 'Повреждение дорожных знаков', 'Открытые люки и опасные участки']);
+            $table->enum('category', ['Ямы на дорогах', 'Неисправное освещение', 'Мусор и свалки', 'Повреждение тротуара', 'Сломанная детская площадка', 'Незаконная парковка', 'Повреждение дорожных знаков', 'Открытые люки и опасные участки']);
             $table->enum('status', ['new', 'resolved', 'rejected'])->default('new'); //статус решения ошибки
             $table->string('date_incident'); //дата происштествия
             $table->enum('contact', ['email', 'sms']);
-            $table->$table->timestamps();
+            $table->timestamps();
         });
     }
 
