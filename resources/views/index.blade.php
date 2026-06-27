@@ -10,9 +10,9 @@
 
 <div class="slider-container"> <!-- слайдер -->
     <div class="slides">
-        <div class="slide" img src="{{ asset('images/slide1.jpg')}}" alt="пример нарушения1"></div>
-        <div class="slide" img src="{{ asset('images/slide2.jpg')}}" alt="пример нарушения2"></div>
-        <div class="slide" img src="{{ asset('images/slide3.jpg')}}" alt="пример нарушения3"></div>
+        <div class="slide" img src="{{ asset('images/slide1.png')}}" alt="пример нарушения1"></div>
+        <div class="slide" img src="{{ asset('images/slide2.png')}}" alt="пример нарушения2"></div>
+        <div class="slide" img src="{{ asset('images/slide3.png')}}" alt="пример нарушения3"></div>
     </div>
 
     <button class="slider-btn prev-btn"></button>
